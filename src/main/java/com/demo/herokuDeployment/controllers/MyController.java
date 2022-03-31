@@ -21,20 +21,14 @@ public class MyController {
         service.addNewEntity(myEntity);
     }
 
-    // @PutMapping("/updateTricomms")
-    // public void updateExistingTricomms(@RequestBody MyEntity myEntity) {
-    //     System.out.println(myEntity);
-    //     service.updateTricomms(myEntity);
-    // }
-
-    // @DeleteMapping("/deleteAnyUser/{id}")
-    // public void deleteEntity(MyEntity myEntity) {
-    //     try {
-    //         service.deleteEntity(myEntity);
-    //     } catch (Exception e) {
-    //         e.printStackTrace();
-    //     }
-    // }
+    @DeleteMapping
+    public void deleteEntity(MyEntity myEntity) {
+        try {
+            service.deleteEntity(myEntity);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     @GetMapping
     public ArrayList<MyEntity> getAll() {
