@@ -15,13 +15,19 @@ public class MyController {
     @Autowired
     MyService service;
 
-    @PostMapping
+    @PostMapping("/new")
     public void addEntity(@RequestBody MyEntity myEntity) {
         System.out.println(myEntity);
         service.addNewEntity(myEntity);
     }
 
-    @DeleteMapping
+    // @PutMapping("/updateTricomms")
+    // public void updateExistingTricomms(@RequestBody MyEntity myEntity) {
+    //     System.out.println(myEntity);
+    //     service.updateTricomms(myEntity);
+    // }
+
+    @DeleteMapping("/deleteAnyUser/{id}")
     public void deleteEntity(MyEntity myEntity) {
         try {
             service.deleteEntity(myEntity);
@@ -30,7 +36,7 @@ public class MyController {
         }
     }
 
-    @GetMapping
+    @GetMapping("/getAllTricomms")
     public ArrayList<MyEntity> getAll() {
         return new ArrayList<MyEntity>(service.getAll());
     }
