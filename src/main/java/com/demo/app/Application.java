@@ -1,13 +1,13 @@
-package com.demo.herokuDeployment;
+package com.demo.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HerokuDeploymentApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HerokuDeploymentApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
