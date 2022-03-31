@@ -15,7 +15,7 @@ public class MyController {
     @Autowired
     MyService service;
 
-    @PostMapping("/new")
+    @PostMapping
     public void addEntity(@RequestBody MyEntity myEntity) {
         System.out.println(myEntity);
         service.addNewEntity(myEntity);
@@ -36,7 +36,7 @@ public class MyController {
     //     }
     // }
 
-    @GetMapping("/getAllTricomms")
+    @GetMapping
     public ArrayList<MyEntity> getAll() {
         return new ArrayList<MyEntity>(service.getAll());
     }
