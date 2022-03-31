@@ -1,14 +1,21 @@
 package com.demo.app.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
 
 @Entity
-@Table
+@Table(name = "myEntity")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Heroku implements  Serializable{
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, updatable = false)
 
     private  Long userId;
