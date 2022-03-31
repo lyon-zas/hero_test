@@ -19,9 +19,9 @@ public class MyService {
         return repository.save(entity);
     }
 
-    public void deleteEntity (MyEntity entity) throws Exception {
-        MyEntity myEntity = repository.findById(entity.getId()).orElseThrow(() -> new Exception("no such company"));
-    }
+    // public void deleteEntity (MyEntity entity) throws Exception {
+    //     MyEntity myEntity = repository.findById(entity.getId()).orElseThrow(() -> new Exception("no such company"));
+    // }
 
     public List<MyEntity> getAll() {
         return repository.findAll();

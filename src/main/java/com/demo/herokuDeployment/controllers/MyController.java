@@ -27,14 +27,14 @@ public class MyController {
     //     service.updateTricomms(myEntity);
     // }
 
-    @DeleteMapping("/deleteAnyUser/{id}")
-    public void deleteEntity(MyEntity myEntity) {
-        try {
-            service.deleteEntity(myEntity);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+    // @DeleteMapping("/deleteAnyUser/{id}")
+    // public void deleteEntity(MyEntity myEntity) {
+    //     try {
+    //         service.deleteEntity(myEntity);
+    //     } catch (Exception e) {
+    //         e.printStackTrace();
+    //     }
+    // }
 
     @GetMapping("/getAllTricomms")
     public ArrayList<MyEntity> getAll() {
