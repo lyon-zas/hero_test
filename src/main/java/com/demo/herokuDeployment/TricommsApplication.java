@@ -4,10 +4,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HerokuDeploymentApplication {
+public class TricommsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HerokuDeploymentApplication.class, args);
+
+		SpringApplication.run(TricommsApplication.class, args);
 	}
 
 }
